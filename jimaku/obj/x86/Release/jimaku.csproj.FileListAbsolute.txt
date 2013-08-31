@@ -12,3 +12,17 @@ C:\DEV\skypejimaku\jimaku\jimaku\obj\x86\Release\GenerateResource.read.1.tlog
 C:\DEV\skypejimaku\jimaku\jimaku\obj\x86\Release\GenerateResource.write.1.tlog
 C:\DEV\skypejimaku\jimaku\jimaku\obj\x86\Release\jimaku.exe
 C:\DEV\skypejimaku\jimaku\jimaku\obj\x86\Release\jimaku.pdb
+D:\DEVELOPEMENT\Skypejimaku\jimaku\bin\Release\jimaku.exe.config
+D:\DEVELOPEMENT\Skypejimaku\jimaku\obj\x86\Release\Interop.SKYPE4COMLib.dll
+D:\DEVELOPEMENT\Skypejimaku\jimaku\obj\x86\Release\jimaku.csproj.ResolveComReference.cache
+D:\DEVELOPEMENT\Skypejimaku\jimaku\obj\x86\Release\jimaku.exe
+D:\DEVELOPEMENT\Skypejimaku\jimaku\obj\x86\Release\jimaku.pdb
+D:\DEVELOPEMENT\Skypejimaku\jimaku\bin\Release\jimaku.exe
+D:\DEVELOPEMENT\Skypejimaku\jimaku\bin\Release\jimaku.pdb
+D:\DEVELOPEMENT\Skypejimaku\jimaku\obj\x86\Release\ResolveAssemblyReference.cache
+D:\DEVELOPEMENT\Skypejimaku\jimaku\obj\x86\Release\jimaku.jimaku.resources
+D:\DEVELOPEMENT\Skypejimaku\jimaku\obj\x86\Release\jimaku.main.resources
+D:\DEVELOPEMENT\Skypejimaku\jimaku\obj\x86\Release\jimaku.Properties.Resources.resources
+D:\DEVELOPEMENT\Skypejimaku\jimaku\obj\x86\Release\jimaku.Skype.resources
+D:\DEVELOPEMENT\Skypejimaku\jimaku\obj\x86\Release\GenerateResource.read.1.tlog
+D:\DEVELOPEMENT\Skypejimaku\jimaku\obj\x86\Release\GenerateResource.write.1.tlog

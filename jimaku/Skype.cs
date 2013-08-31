@@ -27,7 +27,7 @@ namespace jimaku
             //以下を検索keyとしてマッチするChatオブジェクトを抽出する
             //  個人チャットの場合 : 相手のskype名(loftkunとか) 注)表示名じゃない
             //  グループチャットの場合 : 会話のタイトル(～～会議室とか)
-            _key = "test;";
+            _key = "test";
             SKYPE4COMLib.Chat chat = getChat(_key);
             if (chat == null)
             {
@@ -56,6 +56,7 @@ namespace jimaku
         /// <param name="Status">送受信Status</param>
         void _skype_MessageStatus(ChatMessage pMessage, TChatMessageStatus Status)
         {
+            textBox1.Text = "event\r\n" + textBox1.Text;
             try
             {
                 //このメッセージの属しているチャットがkeyに合致するかチェック
@@ -79,6 +80,7 @@ namespace jimaku
         /// </summary>
         private String getMessages(SKYPE4COMLib.Chat chat)
         {
+            
             try
             {
                 String str = "";
@@ -115,27 +117,32 @@ namespace jimaku
         /// <returns></returns>
         private SKYPE4COMLib.Chat getChat(String key)
         {
-            int a = 0;
             textBox1.Text += "getChat\r\n";
             try
             {
-                foreach (SKYPE4COMLib.Chat chat in _skype.Chats) //全てのチャットっぽい
-                //foreach (SKYPE4COMLib.Chat chat in _skype.ActiveChats) //アクティブなチャットウィンドウ順っぽい
+                //foreach (SKYPE4COMLib.Chat chat in _skype.Chats) //全てのチャットっぽい
+                foreach (SKYPE4COMLib.Chat chat in _skype.ActiveChats) //アクティブなチャットウィンドウ順っぽい
                 {
                     textBox1.Text = "chat.Name: " + chat.Name + "\r\n" + textBox1.Text;
                     textBox1.Text = "chat.DialogPartner:" + chat.DialogPartner + "\r\n" + textBox1.Text;
                     textBox1.Text = "chat.Topic:" + chat.Topic + "\r\n" + textBox1.Text;
                     textBox1.Text = "chat.TopicXML:" + chat.TopicXML + "\r\n" + textBox1.Text;
+                    textBox1.Text = "key :" + key +"\r\n" + textBox1.Text;
                     if (checkKey(key, chat) == true)
                     {
                         textBox1.Text += "checkKey\r\n";
                         return chat;
+                    }
+                    else {
+
+                        textBox1.Text = "checkKey fault\r\n" + textBox1.Text;
                     }
                 }
                 return null;
             }
             catch (Exception exp)
             {
+                MessageBox.Show(exp.ToString());
                 return null;
             }
         }
@@ -153,6 +160,7 @@ namespace jimaku
         {
             try
             {
+                textBox1.Text = "chat.Status: " + chat.Status + "\r\n" + textBox1.Text;
                 //けっこうあいまいな判定
                 switch (chat.Status)
                 {
